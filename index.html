@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon32x32.png" sizes="32x32">
+    <link rel="icon" href="lion1.png" sizes="32x32">
     <title>Git </title>
 
     <style>
@@ -13,6 +13,10 @@
             --corTextoPagina: rgb(65, 65, 65);
             --corBranca: #fff;
             --font-family: verdana;
+            --font-size-titulo: 1.2rem; 
+            --font-size-texto: 0.92rem; 
+            --font-size-footer: 0.7rem; 
+            --margin-bottom: 1.5rem;
 
             --margem: 0;
         }
@@ -21,13 +25,28 @@
             background-color: var(--corFundoPagina); 
             color: var(--corTextoPagina);
             font-family: var(--font-family);
+            font-size: var(--font-size-texto);
+            margin-bottom: var(--margin-bottom);
         }
         
         header {
             background-color: var(--corBranca);
+            font-size: var(--font-size-titulo);
             font-weight: bold;
             text-align: center;
+            align-items: center;
             padding: 15px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            background-color: var(--corBranca);
+            padding: 5px;
+            font-size: var(--font-size-footer);
+            text-align: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -40,6 +59,8 @@
     
     <main>
     Criar pontos na história de um projeto conforme vai desenvolvendo
+        <br><br>
+    Árvore com um único Branch(galho)
     <ul>
         <li>git init >> Informar que quer controlar a pasta pelo git
         master (caule da árvore)</li>
@@ -51,13 +72,45 @@
         </ul>
         <li>git commit -m "Adicionado index.html" >> Primeiro commit informando alteração do Código</li>
         <li>git log >> Exibe os commits que já foram realizados(pontos na história). Tele <strong>q</strong> para fechar</li>
+        <ul>
+            <li>git log -2 >> Exibe os dois últimos commits realizados</li>
+        </ul>
         <li>git diff >> Mostra as alterações realizadas</li>
+        <li>Para não rastrear arquivos pelo Git você deve criar um arquivo na raiz do projeto com o nome .gitignore e adicione o caminho dos arquivos(nome da pasta) que não quer rastrear</li>
+        <li>Arquivos</li>
+        <ul>
+            <li>touch .gitignore >> Cria novo arquivo</li>
+            <li>cat .gitignore >> Mostra conteúdo do arquivo</li>
+        </ul>
+            </li>
+        <li>git checkout codigodocommit>> Pular para outro ponto da história, você precisa pegar o código do commit ... no log</li>
+        <ul>
+            <li>git checkout codigodocommit >> Alternar ponto da história</li>
+            <li>git checkout master >> Voltar ao último commit realizado</li>
+        </ul>        
     </ul>
     
+    Adicionar outro Branch(galho) à Árvore
     
+    <ul>
+        <li>git branch feature/nfe >> Cria um novo branch feature/nfe</li>
+        <li>git branch >> Exibe os branchs existentes</li>
+        <li>git checkout feature/nfe >> pula para a branch</li>
+        <li>git merge feature/nfe >> Adiciona branch criado a árvore principal(Caule) (execute dentro do main/master 'git checkout main')</li>
+        <li>git branch -D feature/nfe >> Exclui a branch</li>
+    </ul>
 
+Github
+    <ul>
+        <li>Crie um novo repositório, copie a url criada</li>
+        <li>git remote add origin https://github.com/wsawebmaster/git.git >> Define o repositório que será utilizado</li>
+        <li>git remote -v >> Lista as urls remotas</li>
+        <li>git push origin main >> Envia arquivos ao repositório do Github</li>
 
+    </ul>
     </main>
+
+
 
     <footer> Desenvoldendo </footer>
 </body>

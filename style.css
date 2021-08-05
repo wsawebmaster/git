@@ -1,0 +1,40 @@
+        :root {
+            --corFundoPagina: rgb(247, 247, 247);
+            --corTextoPagina: rgb(65, 65, 65);
+            --corBranca: #fff;
+            --font-family: verdana;
+            --font-size-titulo: 1.2rem; 
+            --font-size-texto: 0.92rem; 
+            --font-size-footer: 0.7rem; 
+            --margin-bottom: 1.7rem;
+
+            --margem: 0;
+        }
+        body { 
+            margin: var(--margem);
+            background-color: var(--corFundoPagina); 
+            color: var(--corTextoPagina);
+            font-family: var(--font-family);
+            font-size: var(--font-size-texto);
+            margin-bottom: var(--margin-bottom);
+        }
+        
+        header {
+            background-color: var(--corBranca);
+            font-size: var(--font-size-titulo);
+            font-weight: bold;
+            text-align: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            background-color: var(--corBranca);
+            padding: 5px;
+            font-size: var(--font-size-footer);
+            text-align: center;
+            align-items: center;
+        }
